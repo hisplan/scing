@@ -26,9 +26,9 @@ The best way to build is set up an AWS EC2 instance and build the components fro
 
 Prerequisites:
 
-- bash, curl, wget, tar
-- Conda
+- Miniconda
 - Docker
+- bash, curl, wget, tar, git
 
 ```bash
 conda create -n scing python=3.8 pip
