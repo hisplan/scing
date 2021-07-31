@@ -176,7 +176,7 @@ def run_package_script(path_package_script: str):
         raise_error("package.sh failed!")
 
     # skip if package-for-cromwell.sh doesn't exist
-    if not os.path.exists(os.path.join(path_package_script, "package-for_cromwell.sh")):
+    if not os.path.exists(os.path.join(path_package_script, "package-for-cromwell.sh")):
         return
 
     cmd = ["bash", "package-for-cromwell.sh"]
