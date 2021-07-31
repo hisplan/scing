@@ -31,8 +31,8 @@ Prerequisites:
 - Docker
 
 ```bash
-conda create -n scri-pipelines python=3.8 pip
-conda activate scri-pipelines
+conda create -n scing python=3.8 pip
+conda activate scing
 pip install -r requirements.txt
 ```
 

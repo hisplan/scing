@@ -312,8 +312,6 @@ def build_containers(registry: str, images: str, git_auth_token: str):
 
         build_container(registry=registry, image=img, git_auth_token=git_auth_token)
 
-        return
-
 
 def parse_arguments():
 
