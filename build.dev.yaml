@@ -1,0 +1,8 @@
+versoin: 1.0
+containers:
+  registry: quay.io/dpeerlab
+  images:
+    - name: samtools
+      version: 1.9
+      project_url: https://github.com/hisplan/docker-samtools
+      download_url: https://github.com/hisplan/docker-samtools/archive/refs/tags/v1.9.tar.gz

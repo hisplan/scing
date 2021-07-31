@@ -1,11 +1,14 @@
-# SING: Single-cell pIpeliNe Garden
+# SCING: Single-Cell pIpeliNe Garden
+
+Pronounced as "sing" /siŋ/
 
 <pre>
- ______     __     __   __     ______
-/\  ___\   /\ \   /\ "-.\ \   /\  ___\
-\ \___  \  \ \ \  \ \ \-.  \  \ \ \__ \
- \/\_____\  \ \_\  \ \_\\"\_\  \ \_____\
-  \/_____/   \/_/   \/_/ \/_/   \/_____/
+ ______     ______     __     __   __     ______
+/\  ___\   /\  ___\   /\ \   /\ "-.\ \   /\  ___\
+\ \___  \  \ \ \____  \ \ \  \ \ \-.  \  \ \ \__ \
+ \/\_____\  \ \_____\  \ \_\  \ \_\\"\_\  \ \_____\
+  \/_____/   \/_____/   \/_/   \/_/ \/_/   \/_____/
+
 </pre>
 
 Containerized/WDLized pipelines built by Single Cell Research Initiative.
@@ -45,6 +48,18 @@ containers:
   registry: hisplan
 ```
 
+where you need to replace `hisplan` with your own Docker Hub.
+
+If you want to use Red Hat Quay.io:
+
+```yaml
+versoin: 1.0
+containers:
+  registry: quay.io/dpeerlab
+```
+
+where you need to replace `dpeerlab` with your own Quay.io namespace.
+
 If you want to use Amazon ECR (EC2 Container Registry):
 
 ```yaml
@@ -62,6 +77,20 @@ Note that Amazon ECR must be set up in advance.
 ```bash
 docker login
 ```
+
+### Red Hat Quay.io
+
+```bash
+docker login quay.io
+```
+
+In addition to the login, you must set an OAuth access token so that the build script can create public repositories in Red Hat Quay.io:
+
+```bash
+export QUAY_AUTH_TOKEN="xyz-123-abc"
+```
+
+If you don't have one, you can create one by following [this instruction](https://access.redhat.com/documentation/en-us/red_hat_quay/3/html/red_hat_quay_api_guide/using_the_red_hat_quay_api#create_oauth_access_token).
 
 ### Amazon ECR
 
