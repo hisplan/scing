@@ -2,7 +2,73 @@ versoin: 1.0
 containers:
   registry: quay.io/dpeerlab
   images:
+    - name: SEQC
+      version: 0.2.9
+      project_url: https://github.com/hisplan/seqc-docker
+      download_url: https://github.com/hisplan/seqc-docker/archive/refs/tags/v0.2.9.tar.gz
+    - name: seqc-utils
+      version: 0.5.1
+      project_url: https://github.com/hisplan/seqc-utils
+      download_url: https://github.com/hisplan/seqc-utils/archive/refs/tags/v0.5.1.tar.gz
     - name: samtools
       version: 1.9
       project_url: https://github.com/hisplan/docker-samtools
       download_url: https://github.com/hisplan/docker-samtools/archive/refs/tags/v1.9.tar.gz
+    - name: velocyto
+      version: 0.17.17
+      project_url: https://github.com/hisplan/docker-velocyto
+      download_url: https://github.com/hisplan/docker-velocyto/archive/refs/tags/v0.17.17.tar.gz
+    - name: fastqc
+      version: 0.11.8
+      project_url: https://github.com/hisplan/docker-fastqc
+      download_url: https://github.com/hisplan/docker-fastqc/archive/refs/tags/v0.11.8.tar.gz
+    - name: seqkit
+      version: 0.16.1
+      project_url: https://github.com/hisplan/sharp/tree/master/dockers/seqkit
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.9.tar.gz
+      directory: dockers/seqkit
+    - name: hto-demux-kmeans
+      version: 0.5.0
+      project_url: https://github.com/hisplan/sharp/tree/master/dockers/hto-demux-kmeans
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.9.tar.gz
+      directory: dockers/hto-demux-kmeans
+    - name: hto-demux-seurat
+      version: 0.6.0
+      project_url: https://github.com/hisplan/sharp/tree/master/dockers/hto-demux-seurat
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.9.tar.gz
+      directory: dockers/hto-demux-seurat
+    - name: hto-adt-postprocess
+      version: 0.3.3
+      project_url: https://github.com/hisplan/sharp/tree/master/dockers/hto-adt-postprocess
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.9.tar.gz
+      directory: dockers/hto-adt-postprocess
+    - name: cutadapt
+      version: 2.5
+      project_url: https://github.com/hisplan/sharp/tree/master/dockers/cutadapt
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.9.tar.gz
+      directory: dockers/cutadapt
+    - name: cut-indrop-spacer
+      version: 0.2.0
+      project_url: https://github.com/hisplan/sharp/tree/master/dockers/cut-indrop-spacer
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.9.tar.gz
+      directory: dockers/cut-indrop-spacer
+    - name: cite-seq-count
+      version: 1.4.2-develop
+      project_url: https://github.com/hisplan/sharp/tree/master/dockers/cite-seq-count
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.9.tar.gz
+      directory: dockers/cite-seq-count
+    - name: pigz
+      version: 2.4
+      project_url: https://github.com/hisplan/docker-pigz
+      download_url: https://github.com/hisplan/docker-pigz/archive/refs/tags/v2.4.tar.gz
+
+pipelines:
+  packages:
+    - name: sharp
+      version: 0.09
+      project_url: https://github.com/hisplan/sharp
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.9.tar.gz
+    - name: velopipe
+      version: 0.0.4
+      project_url: https://github.com/hisplan/velopipe
+      download_url: https://github.com/hisplan/velopipe/archive/refs/tags/v0.0.6.tar.gz

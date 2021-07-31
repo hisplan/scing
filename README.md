@@ -26,7 +26,7 @@ The best way to build is set up an AWS EC2 instance and build the components fro
 
 Prerequisites:
 
-- bash, curl, tar
+- bash, curl, wget, tar
 - Conda
 - Docker
 
