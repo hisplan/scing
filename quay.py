@@ -3,6 +3,7 @@ import json
 import requests
 from requests.exceptions import HTTPError
 
+# document: https://access.redhat.com/documentation/en-us/red_hat_quay/3/html/red_hat_quay_api_guide/using_the_red_hat_quay_api
 QUAY_API_URL = "https://quay.io/api/v1/repository"
 
 
@@ -49,6 +50,32 @@ class Quay:
 
         return response.status_code
 
+    def change_visibility(self, namespace: str, repo_name: str, public: bool):
+        # doc: https://access.redhat.com/documentation/en-us/red_hat_quay/3/html/red_hat_quay_api_guide/appendix_a_red_hat_quay_application_programming_interface_api#post_api_v1_repository_repository_changevisibility
+
+        endpoint = f"{QUAY_API_URL}/{namespace}/{repo_name}/changevisibility"
+
+        parameters = {
+            "visibility": "public" if public else "private",
+            "namespace": namespace,
+            "repository": repo_name,
+        }
+
+        try:
+            response = requests.post(
+                url=endpoint,
+                headers={
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+                    "Authorization": f"Bearer {self.token}",
+                },
+                json=parameters,
+            )
+        except HTTPError as err:
+            print(err)
+
+        return response.status_code
+
 
 if __name__ == "__main__":
 
@@ -56,8 +83,12 @@ if __name__ == "__main__":
 
     quay = Quay(token=token)
 
-    response = quay.create_repo(
-        namespace="dpeerlab", repo_name="hello-world", public=True
+    # status_code = quay.create_repo(
+    #     namespace="dpeerlab", repo_name="hello-world", public=True
+    # )
+
+    status_code = quay.change_visibility(
+        namespace="dpeerlab", repo_name="cromwell-fastqc", public=True
     )
 
-    print(response)
+    print(status_code)
