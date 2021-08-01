@@ -177,7 +177,8 @@ def run_package_script(path_package_script: str):
 
     # skip if package-for-cromwell.sh doesn't exist
     if not os.path.exists(os.path.join(path_package_script, "package-for-cromwell.sh")):
-        return
+        # signal that only package.sh has run
+        return 0
 
     cmd = ["bash", "package-for-cromwell.sh"]
 
@@ -185,6 +186,9 @@ def run_package_script(path_package_script: str):
 
     if exit_code != 0:
         raise_error("package-for-cromwell.sh failed!")
+
+    # signal that both package.sh and package-for-cromwell.sh have run
+    return 1
 
 
 def get_shell_variable(path_config: str, var_name: str) -> str:
@@ -265,6 +269,19 @@ def build_container(registry: str, image: str, git_auth_token: str):
         config=new_config, create=is_amazon_ecr(registry=registry)
     )
 
+    write_config(path_config=path_config, config=new_config)
+
+    verify_config(
+        path_config=path_config,
+        requested_version=image["version"],
+        requested_registry=registry,
+    )
+
+    run_build_script(path_dest)
+
+    return_code = run_package_script(path_dest)
+
+    # change to public repository if quay.io is used
     if is_quay_io(registry):
         from quay import Quay
 
@@ -276,30 +293,23 @@ def build_container(registry: str, image: str, git_auth_token: str):
         if not image_name:
             raise Exception(f"Unable to retrieve image name from {path_config}...")
 
-        status_code = quay.create_repo(
-            namespace=namespace, repo_name=image_name, public=True
-        )
+        image_names = [image_name]
+        if return_code == 1:
+            image_names.append(f"cromwell-{image_name}")
 
-        if status_code == 201:
-            # successful
-            pass
-        elif status_code == 400:
-            # probably the repository already exists. we can ignore this error
-            pass
-        elif status_code == 403:
-            raise Exception("Invalid or missing QUAY_AUTH_TOKEN...")
+        for img in image_names:
+            status_code = quay.change_visibility(
+                namespace=namespace, repo_name=img, public=True
+            )
 
-    write_config(path_config=path_config, config=new_config)
-
-    verify_config(
-        path_config=path_config,
-        requested_version=image["version"],
-        requested_registry=registry,
-    )
-
-    run_build_script(path_dest)
-
-    run_package_script(path_dest)
+            if status_code == 200 or status_code == 201:
+                # successful
+                pass
+            elif status_code == 400:
+                # probably the repository already exists. we can ignore this error
+                pass
+            elif status_code == 403:
+                raise Exception("Invalid or missing QUAY_AUTH_TOKEN...")
 
 
 def build_containers(registry: str, images: str, git_auth_token: str):
