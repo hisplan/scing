@@ -3,6 +3,6 @@ containers:
   registry: quay.io/hisplan
   images:
     - name: fastqc
-      version: 0.11.8
+      version: 0.11.9
       project_url: https://github.com/hisplan/docker-fastqc
-      download_url: https://github.com/hisplan/docker-fastqc/archive/refs/tags/v0.11.8.tar.gz
+      download_url: https://github.com/hisplan/docker-fastqc/archive/refs/tags/v0.11.9.tar.gz

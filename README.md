@@ -33,6 +33,7 @@ Prerequisites:
 ```bash
 conda create -n scing python=3.8 pip
 conda activate scing
+conda install -c cyclus java-jre
 git clone https://github.com/hisplan/scing.git
 pip install .
 ```

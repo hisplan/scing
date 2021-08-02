@@ -5,7 +5,7 @@ containers:
     - name: SEQC
       version: 0.2.9
       project_url: https://github.com/hisplan/seqc-docker
-      download_url: https://github.com/hisplan/seqc-docker/archive/refs/tags/v0.2.9.tar.gz
+      download_url: https://github.com/hisplan/seqc-docker/archive/refs/tags/v0.2.9b.tar.gz
     - name: seqc-utils
       version: 0.5.1
       project_url: https://github.com/hisplan/seqc-utils
@@ -19,9 +19,9 @@ containers:
       project_url: https://github.com/hisplan/docker-velocyto
       download_url: https://github.com/hisplan/docker-velocyto/archive/refs/tags/v0.17.17.tar.gz
     - name: fastqc
-      version: 0.11.8
+      version: 0.11.9
       project_url: https://github.com/hisplan/docker-fastqc
-      download_url: https://github.com/hisplan/docker-fastqc/archive/refs/tags/v0.11.8.tar.gz
+      download_url: https://github.com/hisplan/docker-fastqc/archive/refs/tags/v0.11.9.tar.gz
     - name: seqkit
       version: 0.16.1
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/seqkit
