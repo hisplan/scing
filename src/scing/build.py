@@ -98,15 +98,6 @@ def set_docker_registry(config: str, registry: str):
     return new_config
 
 
-# def set_create_amazon_ecr_repo(config: str, create: bool):
-
-#     new_config = re.sub(
-#         r"create_ecr_repo=.*", "create_ecr_repo=" + ("1" if create else "0"), config
-#     )
-
-#     return new_config
-
-
 def run_build_script(path_build_script: str):
 
     cmd = ["bash", "build.sh"]
@@ -176,10 +167,6 @@ def build_container(registry: str, image: str, git_auth_token: str):
     config = read_config(path_config=path_config)
 
     new_config = set_docker_registry(config=config, registry=registry)
-
-    # new_config = set_create_amazon_ecr_repo(
-    #     config=new_config, create=AwsEcr.is_amazon_ecr(registry=registry)
-    # )
 
     write_config(path_config=path_config, config=new_config)
 

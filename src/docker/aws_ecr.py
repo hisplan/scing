@@ -1,5 +1,5 @@
 import re
-from scing.run_cmd import run_command2
+from scing.run_cmd import run_command, run_command2
 
 
 class AwsEcr:
@@ -8,7 +8,7 @@ class AwsEcr:
 
         cmd = ["aws", "ecr", "describe-repositories", "--repository-name", image_name]
 
-        exit_code = run_command2(cmd)
+        exit_code, _, _ = run_command(cmd)
 
         return exit_code
 
