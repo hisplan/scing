@@ -5,14 +5,24 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: build.py",
+            "name": "Python: scing build",
             "type": "python",
             "request": "launch",
-            "program": "build.py",
+            "program": "${workspaceFolder}/src/bin/scing",
             "console": "integratedTerminal",
             "args": [
-                "--config", "build.dev.yaml"
+                "build", "--config", "build.test.yaml"
             ]
-        }
+        },
+        {
+            "name": "Python: scing push",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/bin/scing",
+            "console": "integratedTerminal",
+            "args": [
+                "push", "--image", "quay.io/hisplan/fastqc:0.11.8"
+            ]
+        }        
     ]
 }
