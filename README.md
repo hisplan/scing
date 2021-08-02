@@ -33,22 +33,21 @@ Prerequisites:
 ```bash
 conda create -n scing python=3.8 pip
 conda activate scing
-pip install -r requirements.txt
+git clone https://github.com/hisplan/scing.git
+pip install .
 ```
 
 ## Configure
 
 Set `registry` in `config.yaml` to your container registry.
 
-The following will use, for example, `hisplan` in Docker Hub as your container registry.
+The following will use, for example, `hisplan` in Docker Hub as your container registry. Replace `hisplan` with yours.
 
 ```yaml
 versoin: 1.0
 containers:
   registry: hisplan
 ```
-
-where you need to replace `hisplan` with your own Docker Hub.
 
 If you want to use Red Hat Quay.io:
 
@@ -58,7 +57,7 @@ containers:
   registry: quay.io/dpeerlab
 ```
 
-where you need to replace `dpeerlab` with your own Quay.io namespace.
+where `dpeerlab` should be replaced with your own Quay.io namespace.
 
 If you want to use Amazon ECR (EC2 Container Registry):
 
@@ -68,7 +67,7 @@ containers:
   registry: 583643567512.dkr.ecr.us-east-1.amazonaws.com
 ```
 
-Note that Amazon ECR must be set up in advance.
+where `583643567512.dkr.ecr.us-east-1.amazonaws.com` should be replaced with your own AWS ECR.
 
 ## Log In to Your Container Registry
 
