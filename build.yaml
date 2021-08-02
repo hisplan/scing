@@ -25,37 +25,37 @@ containers:
     - name: seqkit
       version: 0.16.1
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/seqkit
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.9.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.10.tar.gz
       directory: dockers/seqkit
     - name: hto-demux-kmeans
       version: 0.5.0
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/hto-demux-kmeans
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.9.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.10.tar.gz
       directory: dockers/hto-demux-kmeans
     - name: hto-demux-seurat
       version: 0.6.0
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/hto-demux-seurat
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.9.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.10.tar.gz
       directory: dockers/hto-demux-seurat
     - name: hto-adt-postprocess
       version: 0.3.3
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/hto-adt-postprocess
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.9.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.10.tar.gz
       directory: dockers/hto-adt-postprocess
     - name: cutadapt
       version: 2.5
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/cutadapt
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.9.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.10.tar.gz
       directory: dockers/cutadapt
     - name: cut-indrop-spacer
       version: 0.2.0
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/cut-indrop-spacer
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.9.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.10.tar.gz
       directory: dockers/cut-indrop-spacer
     - name: cite-seq-count
       version: 1.4.2-develop
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/cite-seq-count
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.9.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.10.tar.gz
       directory: dockers/cite-seq-count
     - name: pigz
       version: 2.4
@@ -65,9 +65,9 @@ containers:
 pipelines:
   packages:
     - name: sharp
-      version: 0.0.9
+      version: 0.0.10
       project_url: https://github.com/hisplan/sharp
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.9.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.10.tar.gz
     - name: velopipe
       version: 0.0.4
       project_url: https://github.com/hisplan/velopipe
