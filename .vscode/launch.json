@@ -5,6 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python: scing install",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/bin/scing",
+            "console": "integratedTerminal",
+            "args": [
+                "install", "--config", "build.dev.yaml", "--home", "${workspaceFolder}/workspace/bin"
+            ]
+        },
+        {
             "name": "Python: scing build",
             "type": "python",
             "request": "launch",
@@ -23,6 +33,16 @@
             "args": [
                 "push", "--image", "quay.io/hisplan/fastqc:0.11.8"
             ]
-        }        
+        },
+        {
+            "name": "Python: scing download",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/bin/scing",
+            "console": "integratedTerminal",
+            "args": [
+                "download", "--site-url", "https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest"
+            ]
+        }
     ]
 }
