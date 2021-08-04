@@ -103,16 +103,28 @@ where `583643567512.dkr.ecr.us-east-1.amazonaws.com` is your registry address.
 
 ## Build
 
-In case some of the GitHub repositories are in private, you must set up GitHub auth token to access. If everything is publicly available, you can skip this part.
+In case some of the GitHub repositories are in private, you must set up GitHub auth token to access those private repositories. If everything is publicly available, you can skip this part.
 
 ```bash
 export GIT_AUTH_TOKEN="abc-123-xyz"
 ```
 
+A couple of 10x software (e.g. Cell Ranger) will be dockerized. To do this, you must first sign the 10x Genomics End User Software License Agreement (EULA). To automate the build process, sign the EULA, capture the cookie value, and set it before invoking the build process:
+
+```bash
+export SW_EULA_10x="s%3Aj%3A%7B%22......."
+```
+
 Run the build script:
 
 ```bash
-scing build --config=build.yaml --home $HOME/scing/bin
+scing build --config=build.yaml
+```
+
+Run the install script:
+
+```bash
+scing install --config=build.yaml --home $HOME/scing/bin
 ```
 
 Go to `$HOME/scing/bin` and extract everything:

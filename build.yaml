@@ -7,9 +7,9 @@ containers:
       project_url: https://github.com/hisplan/seqc-docker
       download_url: https://github.com/hisplan/seqc-docker/archive/refs/tags/v0.2.9b.tar.gz
     - name: seqc-utils
-      version: 0.5.1
+      version: 0.5.2
       project_url: https://github.com/hisplan/seqc-utils
-      download_url: https://github.com/hisplan/seqc-utils/archive/refs/tags/v0.5.1.tar.gz
+      download_url: https://github.com/hisplan/seqc-utils/archive/refs/tags/v0.5.2.tar.gz
     - name: samtools
       version: 1.9
       project_url: https://github.com/hisplan/docker-samtools
