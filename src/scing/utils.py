@@ -1,3 +1,4 @@
+import os
 import sys
 import subprocess
 import logging
@@ -57,3 +58,64 @@ def get_shell_variable(path_config: str, var_name: str) -> str:
         raise_error(f"Unable to read config={path_config}' var={var_name}...")
 
     return value
+
+
+def download_from_github(
+    name: str,
+    version: str,
+    download_url: str,
+    path_base_dest: str,
+    git_auth_token: str,
+    skip_exists: bool = True,
+):
+    os.makedirs(path_base_dest, exist_ok=True)
+
+    path_dest = os.path.join(path_base_dest, f"{name}-{version}.tgz")
+
+    # skip if file exists and skip_exists=true
+    if os.path.exists(path_dest) and skip_exists == True:
+        return path_dest
+
+    cmd = [
+        "curl",
+        "-L",
+        "-o",
+        path_dest,
+        "-H",
+        f"Authorization: token {git_auth_token}",
+        download_url,
+    ]
+
+    logger.info(" ".join(cmd))
+
+    exit_code = run_command2(cmd)
+
+    if exit_code != 0:
+        raise_error("curl failed!")
+
+    return path_dest
+
+
+def extract_targzip(name: str, version: str, targzip: str, path_base_dest: str):
+
+    path_dest = os.path.join(path_base_dest, f"{name}-{version}")
+
+    os.makedirs(path_dest, exist_ok=True)
+
+    cmd = ["tar", "xzf", targzip, "-C", path_dest, "--strip-components", "1"]
+
+    exit_code, stdout, stderr = run_command(cmd)
+
+    if exit_code != 0:
+        raise_error("tar xzf failed!")
+
+    stdout = stdout.decode()
+    stderr = stderr.decode()
+
+    if stdout:
+        logger.info(stdout)
+
+    if stderr:
+        logger.error(stderr)
+
+    return path_dest

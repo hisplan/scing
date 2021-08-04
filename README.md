@@ -19,6 +19,7 @@ SEQC       | Single-Cell & Single-Nucleus RNA-seq 3' Preprocessor
 SEQC-ABA   | SEQC Automated Basic Analysis
 Sharp (♯)  | Demultiplexing Hashtag, CITE-seq, Cell Plex, and ASAP-seq
 Velopipe   | RNA Velocity using SEQC
+FastQC     | A high throughput sequence QC analysis tool
 
 ## Set Up Build Environment
 
@@ -111,7 +112,14 @@ export GIT_AUTH_TOKEN="abc-123-xyz"
 Run the build script:
 
 ```bash
-python build.py --config=build.yaml
+scing build --config=build.yaml --home $HOME/scing/bin
+```
+
+Go to `$HOME/scing/bin` and extract everything:
+
+```bash
+cd $HOME/scing/bin
+ls -1 | xargs -I {} tar xvzf {}
 ```
 
 ## How to Use Pipelines

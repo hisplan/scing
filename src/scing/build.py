@@ -1,79 +1,14 @@
 #!/usr/bin/env python
 
 import os
-import sys
 import yaml
-import subprocess
 import re
 import logging
-import argparse
-from docker.aws_ecr import AwsEcr
-from docker.quay_io import QuayIO
 from scing.error import raise_error
-from scing.run_cmd import run_command, run_command2, get_shell_variable
+from scing.utils import run_command, run_command2, get_shell_variable
+from scing.utils import download_from_github, extract_targzip
 
 logger = logging.getLogger()
-
-
-def download_from_github(
-    name: str,
-    version: str,
-    download_url: str,
-    git_auth_token: str,
-    skip_exists: bool = True,
-):
-
-    os.makedirs("workspace/containers", exist_ok=True)
-
-    path_dest = f"workspace/containers/{name}-{version}.tgz"
-
-    # skip if file exists and skip_exists=true
-    if os.path.exists(path_dest) and skip_exists == True:
-        return path_dest
-
-    cmd = [
-        "curl",
-        "-L",
-        "-o",
-        path_dest,
-        "-H",
-        f"Authorization: token {git_auth_token}",
-        download_url,
-    ]
-
-    logger.info(" ".join(cmd))
-
-    exit_code = run_command2(cmd)
-
-    if exit_code != 0:
-        raise_error("curl failed!")
-
-    return path_dest
-
-
-def extract_targzip(name: str, version: str, targzip: str):
-
-    path_dest = f"workspace/containers/{name}-{version}"
-
-    os.makedirs(path_dest, exist_ok=True)
-
-    cmd = ["tar", "xzf", targzip, "-C", path_dest, "--strip-components", "1"]
-
-    exit_code, stdout, stderr = run_command(cmd)
-
-    if exit_code != 0:
-        raise_error("tar xzf failed!")
-
-    stdout = stdout.decode()
-    stderr = stderr.decode()
-
-    if stdout:
-        logger.info(stdout)
-
-    if stderr:
-        logger.error(stderr)
-
-    return path_dest
 
 
 def read_config(path_config: str):
@@ -137,22 +72,28 @@ def verify_config(path_config: str, requested_version: str, requested_registry: 
         )
 
 
-def build_container(registry: str, image: str, git_auth_token: str):
+def build_container(registry: str, image: dict, git_auth_token: str):
 
     # convert to string so that we can compare later against config.sh
     image["version"] = str(image["version"])
 
     logger.info("Building {}/{}:{}".format(registry, image["name"], image["version"]))
 
+    path_base_dest = "workspace/containers"
+
     path_dest = download_from_github(
         name=image["name"],
         version=image["version"],
         download_url=image["download_url"],
+        path_base_dest=path_base_dest,
         git_auth_token=git_auth_token,
     )
 
     path_dest = extract_targzip(
-        name=image["name"], version=image["version"], targzip=path_dest
+        name=image["name"],
+        version=image["version"],
+        targzip=path_dest,
+        path_base_dest=path_base_dest,
     )
 
     # use subdirectory if necessary
@@ -181,7 +122,7 @@ def build_container(registry: str, image: str, git_auth_token: str):
     run_push_script(path_dest)
 
 
-def build_containers(registry: str, images: str, git_auth_token: str):
+def build_containers(registry: str, images: list, git_auth_token: str):
 
     for img in images:
 

@@ -1,6 +1,6 @@
 import re
 import logging
-from scing.run_cmd import run_command2
+from scing.utils import run_command2
 from scing.error import raise_error
 
 

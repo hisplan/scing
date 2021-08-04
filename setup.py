@@ -32,15 +32,16 @@ setuptools.setup(
         "src/bin/scing"
     ],
     install_requires=[
-        "pyyaml==5.4.1",
-        "requests==2.24.0",
-        "tqdm==4.62.0",
-        "cromwell-tools==2.4.1"
+        "pyyaml>=5.4.1",
+        "requests>=2.24.0",
+        "tqdm>=4.62.0",
+        "cromwell-tools>=2.4.1",
+        "beautifulsoup4>=4.9.3"
     ],
     extras_require={
         "dev": [
             "pytest",
-            "black==21.7b0"
+            "black>=21.7b0"
         ]
     }
 )

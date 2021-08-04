@@ -1,5 +1,5 @@
 import re
-from scing.run_cmd import run_command, run_command2
+from scing.utils import run_command, run_command2
 
 
 class AwsEcr:

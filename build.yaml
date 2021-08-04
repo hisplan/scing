@@ -22,6 +22,22 @@ containers:
       version: 0.11.9
       project_url: https://github.com/hisplan/docker-fastqc
       download_url: https://github.com/hisplan/docker-fastqc/archive/refs/tags/v0.11.9.tar.gz
+    - name: asap2kite
+      version: 0.0.1
+      project_url: https://github.com/hisplan/docker-asap2kite
+      download_url: https://github.com/hisplan/docker-asap2kite/archive/refs/tags/v0.0.1.tar.gz
+    - name: star
+      version: 2.5.3a
+      project_url: https://github.com/hisplan/docker-star
+      download_url: https://github.com/hisplan/docker-star/archive/refs/tags/v2.5.3a.tar.gz
+    - name: star
+      version: 2.7.6a
+      project_url: https://github.com/hisplan/docker-star
+      download_url: https://github.com/hisplan/docker-star/archive/refs/tags/v2.7.6a.tar.gz
+    - name: cutadapt
+      version: 2.5
+      project_url: https://github.com/hisplan/docker-cutadapt
+      download_url: https://github.com/hisplan/docker-cutadapt/archive/refs/tags/v2.5.tar.gz
     - name: seqkit
       version: 0.16.1
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/seqkit
@@ -42,11 +58,6 @@ containers:
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/hto-adt-postprocess
       download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.10.tar.gz
       directory: dockers/hto-adt-postprocess
-    - name: cutadapt
-      version: 2.5
-      project_url: https://github.com/hisplan/sharp/tree/master/dockers/cutadapt
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.10.tar.gz
-      directory: dockers/cutadapt
     - name: cut-indrop-spacer
       version: 0.2.0
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/cut-indrop-spacer
@@ -69,6 +80,10 @@ pipelines:
       project_url: https://github.com/hisplan/sharp
       download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.10.tar.gz
     - name: velopipe
-      version: 0.0.4
+      version: 0.0.7
       project_url: https://github.com/hisplan/velopipe
-      download_url: https://github.com/hisplan/velopipe/archive/refs/tags/v0.0.6.tar.gz
+      download_url: https://github.com/hisplan/velopipe/archive/refs/tags/v0.0.7.tar.gz
+    - name: fastqc
+      version: 0.11.9
+      project_url: https://github.com/hisplan/wdl-fastqc
+      download_url: https://github.com/hisplan/wdl-fastqc/archive/refs/tags/v0.11.9.tar.gz

@@ -1,8 +1,15 @@
 versoin: 1.0
 containers:
-  registry: quay.io/hisplan
+  registry: quay.io/devtest
   images:
     - name: fastqc
       version: 0.11.9
       project_url: https://github.com/hisplan/docker-fastqc
       download_url: https://github.com/hisplan/docker-fastqc/archive/refs/tags/v0.11.9.tar.gz
+
+pipelines:
+  packages:
+    - name: sharp
+      version: 0.0.10
+      project_url: https://github.com/hisplan/sharp
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.10.tar.gz
