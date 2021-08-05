@@ -27,7 +27,7 @@ The following will use, for example, `hisplan` in Docker Hub as your container r
 ```yaml
 versoin: 1.0
 containers:
-  registry: hisplan
+  registry: docker.io/hisplan
 ```
 
 If you want to use Red Hat Quay.io:
