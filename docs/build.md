@@ -103,4 +103,3 @@ scing build --config=build.yaml
 ## To Do
 
 - Support Google Containery Registry.
-- Implement parallel build to speed things up.
