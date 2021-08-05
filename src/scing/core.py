@@ -20,6 +20,7 @@ logging.basicConfig(
 
 logo = r"""
 Single-Cell pIpeliNe Garden
+(pronounced as "sing" /siŋ/)
  ______     ______     __     __   __     ______
 /\  ___\   /\  ___\   /\ \   /\ "-.\ \   /\  ___\
 \ \___  \  \ \ \____  \ \ \  \ \ \-.  \  \ \ \__ \
