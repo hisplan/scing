@@ -11,17 +11,18 @@ Pronounced as "sing" /siŋ/
 
 </pre>
 
-Pipeline   | Description
----------- | --------------------------------------------------------------
-SEQC       | Single-Cell & Single-Nucleus RNA-seq 3' Preprocessor
-SEQC Ada   | SEQC Automated Analysis
-Sharp (♯)  | Demultiplexing Hashtag, CITE-seq, Cell Plex, and ASAP-seq
-Velopipe   | RNA Velocity using SEQC
-FastQC     | A high throughput sequence QC analysis tool
+Pipeline          | Description
+----------------- | --------------------------------------------------------------
+SEQC              | Single-Cell & Single-Nucleus RNA-seq 3' Preprocessor
+SEQC Ada          | SEQC Automated Analysis
+Sharp (♯)         | Demultiplexing Hashtag, CITE-seq, Cell Plex, and ASAP-seq
+Velopipe          | RNA Velocity using SEQC
+FastQC            | A high throughput sequence QC analysis tool
+SEQC Custom Genes | Creating a custom genome with reporter genes/transgenes
 
 ## Build
 
-All the required docker containers are pre-built and publicly accessible via [quay.io/hisplan](https://quay.io/user/hisplan). If you want to build the docker containers on your own and push them to your own docker registry, please follow the instructions [here](./docs/build.md). Otherwise, skip to the Install section.
+All the required docker containers are pre-built and publicly accessible via [quay.io/hisplan](https://quay.io/user/hisplan), thus building the containers are optional. If you want to build the docker containers on your own and push them to your own docker registry, please follow the instructions [here](./docs/build.md). Otherwise, skip to the Install section.
 
 ## Install
 
