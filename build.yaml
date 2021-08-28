@@ -3,9 +3,9 @@ containers:
   registry: quay.io/dpeerlab
   images:
     - name: SEQC
-      version: 0.2.9
+      version: 0.2.10
       project_url: https://github.com/hisplan/seqc-docker
-      download_url: https://github.com/hisplan/seqc-docker/archive/refs/tags/v0.2.9b.tar.gz
+      download_url: https://github.com/hisplan/seqc-docker/archive/refs/tags/v0.2.10.tar.gz
     - name: seqc-utils
       version: 0.5.2
       project_url: https://github.com/hisplan/seqc-utils
@@ -41,44 +41,57 @@ containers:
     - name: seqkit
       version: 0.16.1
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/seqkit
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.10.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.12.tar.gz
       directory: dockers/seqkit
     - name: hto-demux-kmeans
       version: 0.5.0
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/hto-demux-kmeans
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.10.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.12.tar.gz
       directory: dockers/hto-demux-kmeans
     - name: hto-demux-seurat
       version: 0.6.0
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/hto-demux-seurat
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.10.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.12.tar.gz
       directory: dockers/hto-demux-seurat
     - name: hto-adt-postprocess
-      version: 0.3.3
+      version: 0.3.4
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/hto-adt-postprocess
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.10.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.12.tar.gz
       directory: dockers/hto-adt-postprocess
     - name: cut-indrop-spacer
       version: 0.2.0
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/cut-indrop-spacer
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.10.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.12.tar.gz
       directory: dockers/cut-indrop-spacer
     - name: cite-seq-count
       version: 1.4.2-develop
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/cite-seq-count
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.10.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.12.tar.gz
       directory: dockers/cite-seq-count
     - name: pigz
       version: 2.4
       project_url: https://github.com/hisplan/docker-pigz
       download_url: https://github.com/hisplan/docker-pigz/archive/refs/tags/v2.4.tar.gz
+    - name: htslib
+      version: 1.9
+      project_url: https://github.com/hisplan/docker-htslib
+      download_url: https://github.com/hisplan/docker-htslib/archive/refs/tags/v1.9.tar.gz
+    - name: fai2gtf
+      version: 0.2.0
+      project_url: https://github.com/hisplan/seqc-custom-genes
+      download_url: https://github.com/hisplan/seqc-custom-genes/archive/refs/tags/v0.0.5.tar.gz
+      directory: dockers/fai2gtf
+    - name: gtf-utils
+      version: 0.0.6
+      project_url: https://github.com/hisplan/gtf-utils
+      download_url: https://github.com/hisplan/gtf-utils/archive/refs/tags/v0.0.6.tar.gz
 
 pipelines:
   packages:
     - name: sharp
-      version: 0.0.10
+      version: 0.0.12
       project_url: https://github.com/hisplan/sharp
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.10.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.12.tar.gz
     - name: velopipe
       version: 0.0.7
       project_url: https://github.com/hisplan/velopipe
@@ -87,3 +100,7 @@ pipelines:
       version: 0.11.9
       project_url: https://github.com/hisplan/wdl-fastqc
       download_url: https://github.com/hisplan/wdl-fastqc/archive/refs/tags/v0.11.9.tar.gz
+    - name: seqc-custom-genes
+      version: 0.0.6
+      project_url: https://github.com/hisplan/seqc-custom-genes
+      download_url: https://github.com/hisplan/seqc-custom-genes/archive/refs/tags/v0.0.6.tar.gz
