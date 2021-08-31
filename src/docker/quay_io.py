@@ -97,3 +97,41 @@ class QuayIO:
             print(err)
 
         return response.status_code
+
+    def list(self, namespace: str):
+        # doc: https://access.redhat.com/documentation/en-us/red_hat_quay/3/html/red_hat_quay_api_guide/appendix_a_red_hat_quay_application_programming_interface_api#get_api_v1_repository
+
+        endpoint = f"{QUAY_API_URL}/repository?namespace={namespace}"
+
+        try:
+            response = requests.get(
+                url=endpoint,
+                headers={
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+                    "Authorization": f"Bearer {self.token}",
+                },
+            )
+        except HTTPError as err:
+            print(err)
+
+        return response
+
+    def delete(self, namespace: str, repo_name: str):
+        # doc: https://access.redhat.com/documentation/en-us/red_hat_quay/3/html/red_hat_quay_api_guide/appendix_a_red_hat_quay_application_programming_interface_api#delete_api_v1_repository_repository
+
+        endpoint = f"{QUAY_API_URL}/repository/{namespace}/{repo_name}"
+
+        try:
+            response = requests.delete(
+                url=endpoint,
+                headers={
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+                    "Authorization": f"Bearer {self.token}",
+                },
+            )
+        except HTTPError as err:
+            print(err)
+
+        return response.status_code
