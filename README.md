@@ -13,18 +13,39 @@ Pronounced as "sing" /siŋ/
 
 Pipeline          | Description
 ----------------- | --------------------------------------------------------------
-SEQC              | Single-Cell & Single-Nucleus RNA-seq 3' Preprocessor
-SEQC Ada          | SEQC Automated Analysis
-Sharp (♯)         | Demultiplexing Hashtag, CITE-seq, Cell Plex, and ASAP-seq
+SEQC              | Single-cell & Single-nucleus RNA-seq 3' Preprocessor
+SEQC Ada          | SEQC AutomateD Analysis
+Sharp (♯)         | Demultiplexing Hashtag, CITE-seq, CellPlex, and ASAP-seq
 Velopipe          | RNA Velocity using SEQC
 FastQC            | A high throughput sequence QC analysis tool
-SEQC Custom Genes | Creating a custom genome with reporter genes/transgenes
+STAR Transgenes   | Creating a genome index for the STAR aligner with transgenes
+Cell Ranger V(D)J | Single-cell immune profiling (TCR/BCR)
+
+Soon
+
+Pipeline          | Description
+----------------- | --------------------------------------------------------------
+Cell Ranger ATAC  | Single-cell chromatin accessbility (ATAC)
+
+## Prerequisites
+
+To use SCING, you need:
+
+- Cromwell: a workflow management system for scientific workflows developed by the Broad Institute
+- Amazon Web Services, Google Cloud Platform, Microsoft Azure, or HPC (with LSF, Slurm, ...)
+
+If you need information about how to install Cromwell on Cloud/HPC, please follow the instructions below:
+
+- Amazon Web Services: https://github.com/hisplan/cromwell-gwf-setup
+- Google Cloud Platform: TBD
+- Microsoft Azure: TBD
+- HPC with LSF: TBD
 
 ## Build
 
-All the required docker containers are pre-built and publicly accessible via [quay.io/hisplan](https://quay.io/user/hisplan), thus building the containers are optional. If you want to build the docker containers on your own and push them to your own docker registry, please follow the instructions [here](./docs/build.md). Otherwise, skip to the Install section.
+All the required docker containers are pre-built and publicly available/accessible via [quay.io/hisplan](https://quay.io/user/hisplan), thus building the containers are optional. If you want to build the docker containers on your own and push them to your own docker registry, please follow the instructions [here](./docs/build.md). Otherwise, skip to the Install section.
 
-## Install
+## Install CLI (Command-Line Interface)
 
 ```bash
 conda create -n scing python=3.8 pip
@@ -34,7 +55,9 @@ git clone https://github.com/hisplan/scing.git
 pip install .
 ```
 
-Run the following command to install everything:
+## Install Pipelines
+
+Run the following command to install all the pipelines:
 
 ```bash
 scing install --config=build.yaml --home $HOME/scing/bin
@@ -46,12 +69,3 @@ Go to `$HOME/scing/bin` and extract everything:
 cd $HOME/scing/bin
 ls -1 | xargs -I {} tar xvzf {}
 ```
-
-## How to Use Pipelines
-
-Prerequisites:
-
-- Cromwell
-- AWS Genomics Workflow or GCP
-
-TBD
