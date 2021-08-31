@@ -92,6 +92,10 @@ containers:
 
 pipelines:
   packages:
+    - name: SEQC
+      version: 0.2.10
+      project_url: https://github.com/hisplan/seqc-docker
+      download_url: https://github.com/hisplan/seqc-docker/archive/refs/tags/v0.2.10.tar.gz
     - name: sharp
       version: 0.0.12
       project_url: https://github.com/hisplan/sharp

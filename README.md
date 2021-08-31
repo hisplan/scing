@@ -16,7 +16,7 @@ Pipeline          | Description
 SEQC              | Single-cell & Single-nucleus RNA-seq 3' Preprocessor
 SEQC Ada          | SEQC AutomateD Analysis
 Sharp (♯)         | Demultiplexing Hashtag, CITE-seq, CellPlex, and ASAP-seq
-Velopipe          | RNA Velocity using SEQC
+Velopipe          | RNA Velocity for SEQC
 FastQC            | A high throughput sequence QC analysis tool
 STAR Transgenes   | Creating a genome index for the STAR aligner with transgenes
 Cell Ranger V(D)J | Single-cell immune profiling (TCR/BCR)
