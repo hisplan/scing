@@ -3,23 +3,34 @@ import re
 import requests
 from requests.exceptions import HTTPError
 from bs4 import BeautifulSoup
+from scing.config import Config
 
 
 def handle_download(site_url: str):
+    def err_eula():
+        msg = """
+You must first sign the 10x Genomics End User Software License Agreement:
+Please run the following commaind:
+
+scing download \\
+    --site-url {} \\
+    --agree-eula
+"""
+        print(msg.format(site_url))
+        exit(1)
 
     try:
-        cookies = dict()
+        config = Config()
 
-        cookies["sw-eula-full"] = os.environ.get("SW_EULA_10x")
+        if not config.has_10x_eula_cookie():
+            err_eula()
+
+        cookies = config.read_10x_eula_cookie()
 
         response = requests.get(site_url, cookies=cookies)
 
         if "Software License Agreement" in response.text:
-            print(
-                "You must first sign the 10x Genomics End User Software License Agreement:"
-            )
-            print(site_url)
-            exit(1)
+            err_eula()
 
         soup = BeautifulSoup(response.text, "html.parser")
 

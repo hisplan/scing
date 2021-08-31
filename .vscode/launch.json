@@ -43,6 +43,17 @@
             "args": [
                 "download", "--site-url", "https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest"
             ]
+        },
+        {
+            "name": "Python: scing agree 10x EULA",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/bin/scing",
+            "console": "integratedTerminal",
+            "args": [
+                "download", "--site-url", "https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest",
+                "--agree-eula"
+            ]
         }
     ]
 }

@@ -9,6 +9,8 @@ from scing.push import handle_push
 from scing.build import handle_build
 from scing.install import handle_install
 from scing.download import handle_download
+from scing.ten_x_eula import agree_10x_eula
+import scing.version
 
 logger = logging.getLogger()
 
@@ -33,6 +35,13 @@ Single-Cell pIpeliNe Garden
 def parse_arguments():
 
     parser = argparse.ArgumentParser()
+
+    parser.add_argument(
+        "-v",
+        "--version",
+        action="version",
+        version="{} v{}".format(parser.prog, scing.version.__version__),
+    )
 
     parser.add_argument(
         "--no-logo",
@@ -88,7 +97,14 @@ def parse_arguments():
     )
 
     parser_download.add_argument(
-        "--site-url", action="store", dest="site_url", help="site URL", required=True
+        "--site-url", action="store", dest="site_url", help="10x software download URL", required=True
+    )
+
+    parser_download.add_argument(
+        "--agree-eula",
+        action="store_true",
+        dest="agree_eula",
+        help="Agree to the 10x Genomics End User Software License Agreement",
     )
 
     # parse arguments
@@ -120,8 +136,10 @@ def main():
 
     elif params.command == "download":
         logger.setLevel(logging.CRITICAL + 1)
-        site_url = params.site_url
-        handle_download(site_url)
+        if params.agree_eula:
+            agree_10x_eula(params.site_url)
+        else:
+            handle_download(params.site_url)
 
     logger.info("DONE.")
 
