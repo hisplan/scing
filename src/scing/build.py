@@ -133,9 +133,9 @@ def build_containers(registry: str, images: list, git_auth_token: str):
         build_container(registry=registry, image=img, git_auth_token=git_auth_token)
 
 
-def handle_build(path_build_config, git_auth_token):
+def handle_build(path_config, git_auth_token):
 
-    with open(path_build_config, "rt") as fin:
+    with open(path_config, "rt") as fin:
 
         config = yaml.safe_load(fin)
 

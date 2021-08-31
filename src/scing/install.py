@@ -62,9 +62,9 @@ def install_pipelines(packages: list, path_home: str, git_auth_token: str):
         )
 
 
-def handle_install(path_build_config, path_home, git_auth_token):
+def handle_install(path_config, path_home, git_auth_token):
 
-    with open(path_build_config, "rt") as fin:
+    with open(path_config, "rt") as fin:
 
         config = yaml.safe_load(fin)
 

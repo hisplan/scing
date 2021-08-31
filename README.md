@@ -60,7 +60,7 @@ pip install .
 Run the following command to install all the pipelines:
 
 ```bash
-scing install --config=build.yaml --home $HOME/scing/bin
+scing install --config=config.yaml --home $HOME/scing/bin
 ```
 
 Go to `$HOME/scing/bin` and extract everything:

@@ -97,7 +97,7 @@ export SW_EULA_10x="s%3Aj%3A%7B%22......."
 Run the build script:
 
 ```bash
-scing build --config=build.yaml
+scing build --config=config.yaml
 ```
 
 ## To Do
