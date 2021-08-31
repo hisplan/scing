@@ -71,7 +71,8 @@ def parse_arguments():
         "--config",
         action="store",
         dest="path_config",
-        help="configuration file (e.g. config.yaml)"
+        help="configuration file (e.g. config.yaml)",
+        required=True,
     )
 
     parser_install = subparsers.add_parser("install", help="Install pipelines")
@@ -80,7 +81,8 @@ def parse_arguments():
         "--config",
         action="store",
         dest="path_config",
-        help="configuration file (e.g. config.yaml)"
+        help="configuration file (e.g. config.yaml)",
+        required=True,
     )
 
     parser_install.add_argument(
@@ -95,7 +97,11 @@ def parse_arguments():
     )
 
     parser_download.add_argument(
-        "--site-url", action="store", dest="site_url", help="10x software download URL", required=True
+        "--site-url",
+        action="store",
+        dest="site_url",
+        help="10x software download URL",
+        required=True,
     )
 
     parser_download.add_argument(
