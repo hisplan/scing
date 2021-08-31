@@ -78,13 +78,17 @@ containers:
       download_url: https://github.com/hisplan/docker-htslib/archive/refs/tags/v1.9.tar.gz
     - name: fai2gtf
       version: 0.2.0
-      project_url: https://github.com/hisplan/seqc-custom-genes
-      download_url: https://github.com/hisplan/seqc-custom-genes/archive/refs/tags/v0.0.5.tar.gz
+      project_url: https://github.com/hisplan/star-transgenes
+      download_url: https://github.com/hisplan/star-transgenes/archive/refs/tags/v0.0.7.tar.gz
       directory: dockers/fai2gtf
     - name: gtf-utils
       version: 0.0.6
       project_url: https://github.com/hisplan/gtf-utils
       download_url: https://github.com/hisplan/gtf-utils/archive/refs/tags/v0.0.6.tar.gz
+    - name: cellranger
+      version: 6.0.2
+      project_url: https://github.com/hisplan/docker-cellranger
+      download_url: https://github.com/hisplan/docker-cellranger/archive/refs/tags/v6.0.2.tar.gz
 
 pipelines:
   packages:
@@ -100,7 +104,12 @@ pipelines:
       version: 0.11.9
       project_url: https://github.com/hisplan/wdl-fastqc
       download_url: https://github.com/hisplan/wdl-fastqc/archive/refs/tags/v0.11.9.tar.gz
-    - name: seqc-custom-genes
-      version: 0.0.6
-      project_url: https://github.com/hisplan/seqc-custom-genes
-      download_url: https://github.com/hisplan/seqc-custom-genes/archive/refs/tags/v0.0.6.tar.gz
+    - name: star-transgenes
+      version: 0.0.7
+      project_url: https://github.com/hisplan/star-transgenes
+      download_url: https://github.com/hisplan/star-transgenes/archive/refs/tags/v0.0.7.tar.gz
+    - name: cellranger-vdj
+      version: 6.0.2
+      project_url: https://github.com/hisplan/wdl-cellranger-vdj
+      download_url: https://github.com/hisplan/wdl-cellranger-vdj/archive/refs/tags/v6.0.2.tar.gz
+
