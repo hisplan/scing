@@ -1,6 +1,6 @@
 versoin: 1.0
 containers:
-  registry: quay.io/dpeerlab
+  registry: quay.io/hisplan
   images:
     - name: SEQC
       version: 0.2.10
