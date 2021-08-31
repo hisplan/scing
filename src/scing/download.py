@@ -13,7 +13,7 @@ You must first sign the 10x Genomics End User Software License Agreement:
 Please run the following commaind:
 
 scing download \\
-    --site-url {} \\
+    --site-url={} \\
     --agree-eula
 """
         print(msg.format(site_url))
