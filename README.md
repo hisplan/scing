@@ -19,13 +19,10 @@ Sharp (♯)         | Demultiplexing Hashtag, CITE-seq, CellPlex, and ASAP-seq
 Velopipe          | RNA Velocity for SEQC
 FastQC            | A high throughput sequence QC analysis tool
 STAR Transgenes   | Creating a genome index for the STAR aligner with transgenes
+Cell Ranger GEX   | Single-cell gene expression (3' and 5')
 Cell Ranger V(D)J | Single-cell immune profiling (TCR/BCR)
-
-Soon
-
-Pipeline          | Description
------------------ | --------------------------------------------------------------
 Cell Ranger ATAC  | Single-cell chromatin accessbility (ATAC)
+Cell Ranger ARC   | Single-cell multiome ATAC + Gene Expression
 
 ## Prerequisites
 
