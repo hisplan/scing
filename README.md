@@ -38,10 +38,6 @@ If you need information about how to install Cromwell on Cloud/HPC, please follo
 - Microsoft Azure: TBD
 - HPC with LSF: TBD
 
-## Build
-
-All the required docker containers are pre-built and publicly available/accessible via [quay.io/hisplan](https://quay.io/user/hisplan), thus building the containers are optional. If you want to build the docker containers on your own and push them to your own docker registry, please follow the instructions [here](./docs/build.md). Otherwise, skip to the Install section.
-
 ## Install CLI (Command-Line Interface)
 
 ```bash
@@ -51,6 +47,10 @@ conda install -c cyclus java-jre
 git clone https://github.com/hisplan/scing.git
 pip install .
 ```
+
+## Build Containers
+
+All the required docker containers are pre-built and publicly available/accessible via [quay.io/hisplan](https://quay.io/user/hisplan), thus building the containers are optional. If you want to build the docker containers on your own and push them to your own docker registry, please follow the instructions [here](./docs/build.md). Otherwise, skip to the Install section.
 
 ## Install Pipelines
 
