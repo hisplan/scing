@@ -2,7 +2,7 @@ versoin: 1.0
 containers:
   registry: quay.io/devtest
   images:
-    - name: SEQC
+    - name: seqc
       version: 0.2.10
       project_url: https://github.com/hisplan/seqc-docker
       download_url: https://github.com/hisplan/seqc-docker/archive/refs/tags/v0.2.10.tar.gz
@@ -105,7 +105,7 @@ containers:
 
 pipelines:
   packages:
-    - name: SEQC
+    - name: seqc
       version: 0.2.10
       project_url: https://github.com/hisplan/seqc-docker
       download_url: https://github.com/hisplan/seqc-docker/archive/refs/tags/v0.2.10.tar.gz
