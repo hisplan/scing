@@ -4,6 +4,7 @@ import requests
 from requests.exceptions import HTTPError
 
 # document: https://access.redhat.com/documentation/en-us/red_hat_quay/3/html/red_hat_quay_api_guide/using_the_red_hat_quay_api
+# swagger: https://docs.quay.io/api/swagger/
 QUAY_API_URL = "https://quay.io/api/v1"
 
 
