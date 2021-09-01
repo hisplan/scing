@@ -88,10 +88,12 @@ In case some of the GitHub repositories are in private, you must set up GitHub a
 export GIT_AUTH_TOKEN="abc-123-xyz"
 ```
 
-10x software (e.g. Cell Ranger) will be dockerized. To do this, you must first sign the 10x Genomics End User Software License Agreement (EULA). To automate the build process, sign the EULA, capture the cookie value, and set it in your bash environment before invoking the build process:
+10x software (e.g. Cell Ranger) will be dockerized. To do this, you must first sign the 10x Genomics End User Software License Agreement (EULA). To automate the build process (e.g. CI/CD), make sure you sign the 10x Genomics EULA first:
 
 ```bash
-export SW_EULA_10x="s%3Aj%3A%7B%22......."
+scing download \
+  --site-url="https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/6.0/" \
+  --agree-eula
 ```
 
 Run the build script:
@@ -100,6 +102,24 @@ Run the build script:
 scing build --config=config.yaml
 ```
 
-## To Do
+## Job File
 
-- Support Google Containery Registry.
+When you create a job file (e.g. a job file for scATAC-seq), make sure you set the `dockerRegistry` parameter to your own docker registry:
+
+```
+{
+    "CellRangerATAC.sampleName": "test_sample1",
+    "CellRangerATAC.fastqNames": "test_sample1",
+    "CellRangerATAC.fastqFiles": [
+        "s3://.../test_sample1_L001_I1_001.fastq.gz",
+        "s3://.../test_sample1_L001_R1_001.fastq.gz",
+        "s3://.../test_sample1_L001_R2_001.fastq.gz",
+        "s3://.../test_sample1_L001_R3_001.fastq.gz",
+    ],
+    "CellRangerATAC.referenceGenome": {
+        "name": "GRCh38-2020-A-2.0.0",
+        "location": "https://cf.10xgenomics.com/supp/cell-atac/refdata-cellranger-arc-GRCh38-2020-A-2.0.0.tar.gz"
+    },
+    "CellRangerATAC.dockerRegistry": "${YOUR_DOCKER_REGISTRY}"
+}
+```
