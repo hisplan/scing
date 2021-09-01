@@ -6,6 +6,11 @@ containers:
       version: 0.2.10
       project_url: https://github.com/hisplan/seqc-docker
       download_url: https://github.com/hisplan/seqc-docker/archive/refs/tags/v0.2.10.tar.gz
+    - name: seqc-basic-analysis
+      version: 0.0.10
+      project_url: https://github.com/hisplan/seqc-ada
+      download_url: https://github.com/hisplan/seqc-ada/archive/refs/tags/v0.0.2.tar.gz
+      directory: dockers/seqc-basic-analysis
     - name: seqc-utils
       version: 0.5.2
       project_url: https://github.com/hisplan/seqc-utils
@@ -89,9 +94,25 @@ containers:
       version: 6.0.2
       project_url: https://github.com/hisplan/docker-cellranger
       download_url: https://github.com/hisplan/docker-cellranger/archive/refs/tags/v6.0.2.tar.gz
+    - name: cellranger-arc
+      version: 2.0.0
+      project_url: https://github.com/hisplan/docker-cellranger-arc
+      download_url: https://github.com/hisplan/docker-cellranger-arc/archive/refs/tags/v2.0.0.tar.gz
+    - name: cellranger-atac
+      version: 2.0.0
+      project_url: https://github.com/hisplan/docker-cellranger-atac
+      download_url: https://github.com/hisplan/docker-cellranger-atac/archive/refs/tags/v2.0.0.tar.gz
 
 pipelines:
   packages:
+    - name: SEQC
+      version: 0.2.10
+      project_url: https://github.com/hisplan/seqc-docker
+      download_url: https://github.com/hisplan/seqc-docker/archive/refs/tags/v0.2.10.tar.gz
+    - name: seqc-ada
+      version: 0.0.2
+      project_url: https://github.com/hisplan/seqc-ada
+      download_url: https://github.com/hisplan/seqc-ada/archive/refs/tags/v0.0.2.tar.gz
     - name: sharp
       version: 0.0.12
       project_url: https://github.com/hisplan/sharp
@@ -108,8 +129,19 @@ pipelines:
       version: 0.0.7
       project_url: https://github.com/hisplan/star-transgenes
       download_url: https://github.com/hisplan/star-transgenes/archive/refs/tags/v0.0.7.tar.gz
+    - name: cellranger-gex
+      version: 6.0.2
+      project_url: https://github.com/hisplan/wdl-cellranger-gex
+      download_url: https://github.com/hisplan/wdl-cellranger-gex/archive/refs/tags/v6.0.2.tar.gz
     - name: cellranger-vdj
       version: 6.0.2
       project_url: https://github.com/hisplan/wdl-cellranger-vdj
       download_url: https://github.com/hisplan/wdl-cellranger-vdj/archive/refs/tags/v6.0.2.tar.gz
-
+    - name: cellranger-arc
+      version: 2.0.0
+      project_url: https://github.com/hisplan/wdl-cellranger-arc
+      download_url: https://github.com/hisplan/wdl-cellranger-arc/archive/refs/tags/v2.0.0.tar.gz
+    - name: cellranger-atac
+      version: 2.0.0
+      project_url: https://github.com/hisplan/wdl-cellranger-atac
+      download_url: https://github.com/hisplan/wdl-cellranger-atac/archive/refs/tags/v2.0.0.tar.gz
