@@ -24,6 +24,15 @@ Cell Ranger V(D)J | Single-cell immune profiling (TCR/BCR)
 Cell Ranger ATAC  | Single-cell chromatin accessbility (ATAC)
 Cell Ranger ARC   | Single-cell multiome ATAC + Gene Expression
 
+Coming Soon
+
+Pipeline          | Description
+----------------- | --------------------------------------------------------------
+ArchR             | Single-cell chromatin accessbility (ATAC)
+mkref             | Creating a human+mouse hybrid genome
+Space Ranger      | Single-cell spatial gene expression
+CellPlex          | Cell multiplexing
+
 ## Prerequisites
 
 To use SCING, you need:
@@ -43,9 +52,22 @@ If you need information about how to install Cromwell on Cloud/HPC, please follo
 ```bash
 conda create -n scing python=3.8 pip
 conda activate scing
-conda install -c cyclus java-jre
 git clone https://github.com/hisplan/scing.git
 pip install .
+```
+
+If you are a developer of SCING, additionally install JRE or JDK. Here are some options to install JRE/JDK:
+
+JRE (Java 8 packaged by Cyclus):
+
+```
+conda install -c cyclus java-jre
+```
+
+JDK (Zulu OpenJDK v11):
+
+```
+conda install -c conda-forge openjdk
 ```
 
 ## Build Containers
