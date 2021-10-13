@@ -31,6 +31,10 @@ def install_pipeline(package: dict, path_home: str, git_auth_token: str):
 
     path_base_dest = "workspace/pipelines"
 
+    # override if git auth token is available in the config
+    if "git_auth_token" in package:
+        git_auth_token = package["git_auth_token"]
+
     path_dest = download_from_github(
         name=package["name"],
         version=package["version"],

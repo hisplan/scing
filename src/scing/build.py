@@ -81,6 +81,10 @@ def build_container(registry: str, image: dict, git_auth_token: str):
 
     path_base_dest = "workspace/containers"
 
+    # override if git auth token is available in the config
+    if "git_auth_token" in image:
+        git_auth_token = image["git_auth_token"]
+
     path_dest = download_from_github(
         name=image["name"],
         version=image["version"],
