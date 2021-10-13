@@ -82,13 +82,25 @@ where `583643567512.dkr.ecr.us-east-1.amazonaws.com` is your registry address.
 
 ## Build
 
-In case some of the GitHub repositories are in private, you must set up GitHub auth token to access those private repositories. If everything is publicly available, you can skip this part.
+In case some of the GitHub repositories are in private mode, you must set up GitHub auth token to access those private repositories. If you want to use your GitHub auth token to access all the repositories specified in the config file, you can set up the environment variable as shown below:
 
 ```bash
 export GIT_AUTH_TOKEN="abc-123-xyz"
 ```
 
-10x software (e.g. Cell Ranger) will be dockerized. To do this, you must first sign the 10x Genomics End User Software License Agreement (EULA). To automate the build process (e.g. CI/CD), make sure you sign the 10x Genomics EULA first:
+If only some of the repositories are private or if you need to specify different GitHub auth tokens for different repositoires, then you can set up auth token on a per-image basis as shown below:
+
+```yaml
+- name: cellranger-atac
+  version: 2.0.0
+  project_url: https://github.com/hisplan/docker-cellranger-atac
+  download_url: https://github.com/hisplan/docker-cellranger-atac/archive/refs/tags/v2.0.0.tar.gz
+  git_auth_token: abc-123-xyz
+```
+
+If everything is publicly available, you don't need to worry about GitHub auth token.
+
+During the build process, 10x software (e.g. Cell Ranger) will be dockerized. To do this, you must first sign the 10x Genomics End User Software License Agreement (EULA). To automate the build process (e.g. CI/CD), make sure you sign the 10x Genomics EULA first:
 
 ```bash
 scing download \
