@@ -42,7 +42,9 @@ To use SCING, you need:
 
 If you need information about how to install Cromwell on Cloud/HPC, please follow the instructions below:
 
-- Amazon Web Services: https://github.com/hisplan/cromwell-gwf-setup
+- Amazon Web Services
+  - Amazon Genomics Workflow: https://github.com/hisplan/cromwell-gwf-setup
+  - Amazon Genomics CLI (AGC): TBD
 - Google Cloud Platform: TBD
 - Microsoft Azure: TBD
 - HPC with LSF: TBD
