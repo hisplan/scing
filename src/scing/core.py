@@ -121,6 +121,8 @@ def main():
 
     params = parse_arguments()
 
+    git_auth_token = os.environ.get("GIT_AUTH_TOKEN")
+
     if params.show_logo:
         print(logo)
 
@@ -129,13 +131,11 @@ def main():
 
     elif params.command == "build":
         path_config = params.path_config
-        git_auth_token = os.environ["GIT_AUTH_TOKEN"]
         handle_build(path_config, git_auth_token)
 
     elif params.command == "install":
         path_config = params.path_config
         path_home = params.path_home
-        git_auth_token = os.environ["GIT_AUTH_TOKEN"]
         handle_install(path_config, path_home, git_auth_token)
 
     elif params.command == "download":

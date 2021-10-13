@@ -77,9 +77,11 @@ def download_from_github(
         return path_dest
 
     # construct command
-    cmd = ["curl", "-L", "-o", path_dest, "-H"]
+    # -L to follow the 3xx response code
+    # --fail to return exit code
+    cmd = ["curl", "-L", "--fail", "-o", path_dest]
     if git_auth_token:
-        cmd += [f"Authorization: token {git_auth_token}"]
+        cmd += ["-H", f"Authorization: token {git_auth_token}"]
     cmd += [download_url]
 
     logger.info(" ".join(cmd))
@@ -87,7 +89,11 @@ def download_from_github(
     exit_code = run_command2(cmd)
 
     if exit_code != 0:
-        raise_error("curl failed!")
+        raise_error(
+            f"Unable to download {download_url}."
+            " Either the package doesn't exist or it could be in a private repository."
+            " For private repository, set GIT_AUTH_TOKEN and rerun."
+        )
 
     return path_dest
 
