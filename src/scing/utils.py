@@ -76,15 +76,11 @@ def download_from_github(
     if os.path.exists(path_dest) and skip_exists == True:
         return path_dest
 
-    cmd = [
-        "curl",
-        "-L",
-        "-o",
-        path_dest,
-        "-H",
-        f"Authorization: token {git_auth_token}",
-        download_url,
-    ]
+    # construct command
+    cmd = ["curl", "-L", "-o", path_dest, "-H"]
+    if git_auth_token:
+        cmd += [f"Authorization: token {git_auth_token}"]
+    cmd += [download_url]
 
     logger.info(" ".join(cmd))
 
