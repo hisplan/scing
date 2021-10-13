@@ -11,7 +11,7 @@
             "program": "${workspaceFolder}/src/bin/scing",
             "console": "integratedTerminal",
             "args": [
-                "install", "--config", "build.dev.yaml", "--home", "${workspaceFolder}/workspace/bin"
+                "install", "--config", "config.dev.yaml", "--home", "${workspaceFolder}/workspace/bin"
             ]
         },
         {
@@ -21,7 +21,7 @@
             "program": "${workspaceFolder}/src/bin/scing",
             "console": "integratedTerminal",
             "args": [
-                "build", "--config", "build.test.yaml"
+                "build", "--config", "config.dev.yaml"
             ]
         },
         {
