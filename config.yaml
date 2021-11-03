@@ -46,32 +46,32 @@ containers:
     - name: seqkit
       version: 0.16.1
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/seqkit
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.12.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.13.tar.gz
       directory: dockers/seqkit
     - name: hto-demux-kmeans
       version: 0.5.0
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/hto-demux-kmeans
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.12.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.13.tar.gz
       directory: dockers/hto-demux-kmeans
     - name: hto-demux-seurat
       version: 0.6.0
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/hto-demux-seurat
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.12.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.13.tar.gz
       directory: dockers/hto-demux-seurat
     - name: hto-adt-postprocess
       version: 0.3.4
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/hto-adt-postprocess
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.12.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.13.tar.gz
       directory: dockers/hto-adt-postprocess
     - name: cut-indrop-spacer
       version: 0.2.0
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/cut-indrop-spacer
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.12.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.13.tar.gz
       directory: dockers/cut-indrop-spacer
     - name: cite-seq-count
       version: 1.4.2-develop
       project_url: https://github.com/hisplan/sharp/tree/master/dockers/cite-seq-count
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.12.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.13.tar.gz
       directory: dockers/cite-seq-count
     - name: pigz
       version: 2.4
@@ -91,9 +91,9 @@ containers:
       project_url: https://github.com/hisplan/gtf-utils
       download_url: https://github.com/hisplan/gtf-utils/archive/refs/tags/v0.0.6.tar.gz
     - name: cellranger
-      version: 6.0.2
+      version: 6.1.1
       project_url: https://github.com/hisplan/docker-cellranger
-      download_url: https://github.com/hisplan/docker-cellranger/archive/refs/tags/v6.0.2.tar.gz
+      download_url: https://github.com/hisplan/docker-cellranger/archive/refs/tags/v6.1.1.tar.gz
     - name: cellranger-arc
       version: 2.0.0
       project_url: https://github.com/hisplan/docker-cellranger-arc
@@ -114,9 +114,9 @@ pipelines:
       project_url: https://github.com/hisplan/seqc-ada
       download_url: https://github.com/hisplan/seqc-ada/archive/refs/tags/v0.0.3.tar.gz
     - name: sharp
-      version: 0.0.12
+      version: 0.0.13
       project_url: https://github.com/hisplan/sharp
-      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.12.tar.gz
+      download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.13.tar.gz
     - name: velopipe
       version: 0.0.7
       project_url: https://github.com/hisplan/velopipe
@@ -130,13 +130,13 @@ pipelines:
       project_url: https://github.com/hisplan/star-transgenes
       download_url: https://github.com/hisplan/star-transgenes/archive/refs/tags/v0.0.7.tar.gz
     - name: cellranger-gex
-      version: 6.0.2
+      version: 6.1.1
       project_url: https://github.com/hisplan/wdl-cellranger-gex
-      download_url: https://github.com/hisplan/wdl-cellranger-gex/archive/refs/tags/v6.0.2.tar.gz
+      download_url: https://github.com/hisplan/wdl-cellranger-gex/archive/refs/tags/v6.1.1.tar.gz
     - name: cellranger-vdj
-      version: 6.0.2
+      version: 6.1.1
       project_url: https://github.com/hisplan/wdl-cellranger-vdj
-      download_url: https://github.com/hisplan/wdl-cellranger-vdj/archive/refs/tags/v6.0.2.tar.gz
+      download_url: https://github.com/hisplan/wdl-cellranger-vdj/archive/refs/tags/v6.1.1.tar.gz
     - name: cellranger-arc
       version: 2.0.0
       project_url: https://github.com/hisplan/wdl-cellranger-arc
