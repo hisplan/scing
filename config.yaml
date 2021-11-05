@@ -91,9 +91,9 @@ containers:
       project_url: https://github.com/hisplan/gtf-utils
       download_url: https://github.com/hisplan/gtf-utils/archive/refs/tags/v0.0.6.tar.gz
     - name: cellranger
-      version: 6.1.1
+      version: 6.1.2
       project_url: https://github.com/hisplan/docker-cellranger
-      download_url: https://github.com/hisplan/docker-cellranger/archive/refs/tags/v6.1.1.tar.gz
+      download_url: https://github.com/hisplan/docker-cellranger/archive/refs/tags/v6.1.2.tar.gz
     - name: cellranger-arc
       version: 2.0.0
       project_url: https://github.com/hisplan/docker-cellranger-arc
