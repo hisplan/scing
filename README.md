@@ -88,5 +88,5 @@ Go to `$HOME/scing/bin` and extract everything:
 
 ```bash
 cd $HOME/scing/bin
-ls -1 | xargs -I {} tar xvzf {}
+ls -1 *.tar.gz | xargs -I {} bash -c "tar xvzf {} && rm -rf {}"
 ```
