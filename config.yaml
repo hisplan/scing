@@ -134,9 +134,9 @@ pipelines:
       project_url: https://github.com/hisplan/wdl-transgenes
       download_url: https://github.com/hisplan/wdl-transgenes/archive/refs/tags/v0.0.8.tar.gz
     - name: cellranger-gex
-      version: 6.1.1
+      version: 6.1.2
       project_url: https://github.com/hisplan/wdl-cellranger-gex
-      download_url: https://github.com/hisplan/wdl-cellranger-gex/archive/refs/tags/v6.1.1.tar.gz
+      download_url: https://github.com/hisplan/wdl-cellranger-gex/archive/refs/tags/v6.1.2.tar.gz
     - name: cellranger-vdj
       version: 6.1.1
       project_url: https://github.com/hisplan/wdl-cellranger-vdj
