@@ -11,20 +11,20 @@ Pronounced as "sing" /siŋ/
 
 </pre>
 
-Pipeline          | Description
------------------ | --------------------------------------------------------------
-SEQC              | Single-cell & Single-nucleus RNA-seq 3' Preprocessor
-SEQC Ada          | SEQC AutomateD Analysis
-Sharp (♯)         | Demultiplexing Hashtag, CITE-seq, CellPlex, and ASAP-seq
-Velopipe          | RNA Velocity for SEQC
-FastQC            | A high throughput sequence QC analysis tool
-Transgenes        | Creating a reference package with transgenes
-Cell Ranger GEX   | Single-cell gene expression (3' and 5')
-Cell Ranger V(D)J | Single-cell immune profiling (TCR/BCR)
-Cell Ranger ATAC  | Single-cell chromatin accessbility (ATAC)
-Cell Ranger ARC   | Single-cell multiome ATAC + Gene Expression
-Space Ranger      | Single-cell spatial gene expression
-CellPlex          | Cell multiplexing
+Pipeline          | Description                                              | Version
+----------------- | ---------------------------------------------------------|---------
+SEQC              | Single-cell & Single-nucleus RNA-seq 3' Preprocessor     | 0.2.10
+SEQC Ada          | SEQC AutomateD Analysis                                  | 0.0.3
+Sharp (♯)         | Demultiplexing Hashtag, CITE-seq, CellPlex, and ASAP-seq | 0.0.13
+Velopipe          | RNA Velocity for SEQC                                    | 0.0.8
+FastQC            | A high throughput sequence QC analysis tool              | 0.11.9
+Transgenes        | Creating a reference package with transgenes             | 0.0.8
+Cell Ranger GEX   | Single-cell gene expression (3' and 5')                  | 6.1.2
+Cell Ranger V(D)J | Single-cell immune profiling (TCR/BCR)                   | 6.1.1
+Cell Ranger ATAC  | Single-cell chromatin accessbility (ATAC)                | 2.0.0
+Cell Ranger ARC   | Single-cell multiome ATAC + Gene Expression              | 2.0.0
+Space Ranger      | Single-cell spatial gene expression                      | 1.3.1
+CellPlex          | Cell multiplexing                                        | 6.1.1
 
 Coming Soon
 
@@ -58,7 +58,7 @@ git clone https://github.com/hisplan/scing.git
 pip install .
 ```
 
-If you are a developer of SCING, additionally install JRE or JDK. Here are some options to install JRE/JDK:
+If you are a developer of SCING, additionally install either JRE or JDK. Here are some options for installing JRE or JDK:
 
 JRE (Java 8 packaged by Cyclus):
 
