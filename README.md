@@ -20,7 +20,7 @@ Velopipe          | RNA Velocity for SEQC                                    | 0
 FastQC            | A high throughput sequence QC analysis tool              | 0.11.9
 Transgenes        | Creating a reference package with transgenes             | 0.0.8
 Cell Ranger GEX   | Single-cell gene expression (3' and 5')                  | 6.1.2
-Cell Ranger V(D)J | Single-cell immune profiling (TCR/BCR)                   | 6.1.1
+Cell Ranger V(D)J | Single-cell immune profiling (TCR/BCR)                   | 6.1.2
 Cell Ranger ATAC  | Single-cell chromatin accessbility (ATAC)                | 2.0.0
 Cell Ranger ARC   | Single-cell multiome ATAC + Gene Expression              | 2.0.0
 Space Ranger      | Single-cell spatial gene expression                      | 1.3.1
@@ -32,6 +32,7 @@ Pipeline          | Description
 ----------------- | --------------------------------------------------------------
 ArchR             | Single-cell chromatin accessbility (ATAC)
 mkref             | Creating a human+mouse hybrid genome
+Mito Tracing      | Lineage tracing using mitochondrial mutations
 
 ## Prerequisites
 
