@@ -24,7 +24,7 @@ Cell Ranger V(D)J | Single-cell immune profiling (TCR/BCR)                   | 6
 Cell Ranger ATAC  | Single-cell chromatin accessbility (ATAC)                | 2.0.0
 Cell Ranger ARC   | Single-cell multiome ATAC + Gene Expression              | 2.0.0
 Space Ranger      | Single-cell spatial gene expression                      | 1.3.1
-CellPlex          | Cell multiplexing                                        | 6.1.1
+CellPlex          | Cell multiplexing                                        | 6.1.2
 
 Coming Soon
 

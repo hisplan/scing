@@ -3,13 +3,13 @@ containers:
   registry: quay.io/devtest
   images:
     - name: cellranger
-      version: 6.1.1
+      version: 6.1.2
       project_url: https://github.com/hisplan/docker-cellranger
-      download_url: https://github.com/hisplan/docker-cellranger/archive/refs/tags/v6.1.1.tar.gz
+      download_url: https://github.com/hisplan/docker-cellranger/archive/refs/tags/v6.1.2.tar.gz
 
 pipelines:
   packages:
     - name: cellranger-vdj
-      version: 6.1.1
+      version: 6.1.2
       project_url: https://github.com/hisplan/wdl-cellranger-vdj
-      download_url: https://github.com/hisplan/wdl-cellranger-vdj/archive/refs/tags/v6.1.1.tar.gz
+      download_url: https://github.com/hisplan/wdl-cellranger-vdj/archive/refs/tags/v6.1.2.tar.gz
