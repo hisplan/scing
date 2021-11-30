@@ -122,9 +122,9 @@ pipelines:
       project_url: https://github.com/hisplan/sharp
       download_url: https://github.com/hisplan/sharp/archive/refs/tags/v0.0.13.tar.gz
     - name: velopipe
-      version: 0.0.8
+      version: 0.0.9
       project_url: https://github.com/hisplan/velopipe
-      download_url: https://github.com/hisplan/velopipe/archive/refs/tags/v0.0.8.tar.gz
+      download_url: https://github.com/hisplan/velopipe/archive/refs/tags/v0.0.9.tar.gz
     - name: fastqc
       version: 0.11.9
       project_url: https://github.com/hisplan/wdl-fastqc
