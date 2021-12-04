@@ -2,6 +2,8 @@
 
 Pronounced as "sing" /siŋ/
 
+Unified framework for building and running single-cell computational pipelines
+
 <pre>
  ______     ______     __     __   __     ______
 /\  ___\   /\  ___\   /\ \   /\ "-.\ \   /\  ___\
