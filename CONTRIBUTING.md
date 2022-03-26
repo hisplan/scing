@@ -11,3 +11,7 @@ TBD
 Example: `sharp (♯)` (https://github.com/hisplan/sharp)
 
 TBD
+
+## Boilerplate
+
+https://github.com/hisplan/wdl-boilerplate
