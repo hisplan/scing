@@ -15,7 +15,7 @@ Unified framework for building and running single-cell computational pipelines
 
 Pipeline          | Description                                              | Version
 ----------------- | ---------------------------------------------------------|---------
-SEQC              | Single-cell & Single-nucleus RNA-seq 3' Preprocessor     | 0.2.10
+SEQC              | Single-cell & Single-nucleus RNA-seq 3' Preprocessor     | 0.2.11
 SEQC Ada          | SEQC AutomateD Analysis                                  | 0.0.3
 Sharp (♯)         | Demultiplexing Hashtag, CITE-seq, CellPlex, and ASAP-seq | 0.0.13
 Velopipe          | RNA Velocity for SEQC                                    | 0.0.9

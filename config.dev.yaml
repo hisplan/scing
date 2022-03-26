@@ -3,9 +3,9 @@ containers:
   registry: quay.io/devtest
   images:
     - name: seqc
-      version: 0.2.10
+      version: 0.2.11
       project_url: https://github.com/hisplan/seqc-docker
-      download_url: https://github.com/hisplan/seqc-docker/archive/refs/tags/v0.2.10.tar.gz
+      download_url: https://github.com/hisplan/seqc-docker/archive/refs/tags/v0.2.11.tar.gz
     - name: seqc-basic-analysis
       version: 0.0.10
       project_url: https://github.com/hisplan/seqc-ada
@@ -110,9 +110,9 @@ containers:
 pipelines:
   packages:
     - name: seqc
-      version: 0.2.10
+      version: 0.2.11
       project_url: https://github.com/hisplan/seqc-docker
-      download_url: https://github.com/hisplan/seqc-docker/archive/refs/tags/v0.2.10.tar.gz
+      download_url: https://github.com/hisplan/seqc-docker/archive/refs/tags/v0.2.11.tar.gz
     - name: seqc-ada
       version: 0.0.3
       project_url: https://github.com/hisplan/seqc-ada
