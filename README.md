@@ -27,13 +27,13 @@ Cell Ranger ATAC  | Single-cell chromatin accessbility (ATAC)                | 2
 Cell Ranger ARC   | Single-cell multiome ATAC + Gene Expression              | 2.0.0
 Space Ranger      | Single-cell spatial gene expression                      | 1.3.1
 CellPlex          | Cell multiplexing                                        | 6.1.2
+mkref             | Creating a human+mouse hybrid genome                     | 0.0.6
 
 Coming Soon
 
 Pipeline          | Description
 ----------------- | --------------------------------------------------------------
 ArchR             | Single-cell chromatin accessbility (ATAC)
-mkref             | Creating a human+mouse hybrid genome
 Mito Tracing      | Lineage tracing using mitochondrial mutations
 
 ## Prerequisites
