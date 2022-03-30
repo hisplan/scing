@@ -17,7 +17,7 @@ Pipeline          | Description                                              | V
 ----------------- | ---------------------------------------------------------|---------
 SEQC              | Single-cell & Single-nucleus RNA-seq 3' Preprocessor     | 0.2.11
 SEQC Ada          | SEQC AutomateD Analysis                                  | 0.0.4
-Sharp (♯)         | Demultiplexing Hashtag, CITE-seq, CellPlex, and ASAP-seq | 0.0.13
+Sharp (♯)         | Demultiplexing Hashtag, CITE-seq, CellPlex, and ASAP-seq | 0.1.0
 Velopipe          | RNA Velocity for SEQC                                    | 0.0.9
 FastQC            | A high throughput sequence QC analysis tool              | 0.11.9
 Transgenes        | Creating a reference package with transgenes             | 0.0.8
