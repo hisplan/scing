@@ -162,7 +162,7 @@ pipelines:
       version: 1.3.1
       project_url: https://github.com/hisplan/wdl-spaceranger
       download_url: https://github.com/hisplan/wdl-spaceranger/archive/refs/tags/v1.3.1.tar.gz
-    - name: mkreef
+    - name: mkref
       version: 0.0.6
       project_url: https://github.com/hisplan/wdl-mkref
       download_url: https://github.com/hisplan/wdl-mkref/archive/refs/tags/v0.0.6.tar.gz
