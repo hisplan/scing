@@ -33,7 +33,7 @@ Coming Soon
 
 Pipeline          | Description
 ----------------- | --------------------------------------------------------------
-ArchR             | Single-cell chromatin accessbility (ATAC)
+ArchR             | Processing and analyzing single-cell ATAC-seq data
 Mito Tracing      | Lineage tracing using mitochondrial mutations
 
 ## Prerequisites
@@ -58,6 +58,7 @@ If you need information about how to install Cromwell on Cloud/HPC, please follo
 conda create -n scing python=3.8 pip
 conda activate scing
 git clone https://github.com/hisplan/scing.git
+cd scing
 pip install .
 ```
 
@@ -65,14 +66,20 @@ If you are a developer of SCING, additionally install either JRE or JDK. Here ar
 
 JRE (Java 8 packaged by Cyclus):
 
-```
+```bash
 conda install -c cyclus java-jre
 ```
 
 JDK (Zulu OpenJDK v11):
 
-```
+```bash
 conda install -c conda-forge openjdk
+```
+
+On HPC:
+
+```bash
+module add java/11.0.12
 ```
 
 ## Build Containers
