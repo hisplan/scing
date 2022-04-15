@@ -23,17 +23,17 @@ FastQC            | A high throughput sequence QC analysis tool              | 0
 Transgenes        | Creating a reference package with transgenes             | 0.0.8
 Cell Ranger GEX   | Single-cell gene expression (3' and 5')                  | 6.1.2
 Cell Ranger V(D)J | Single-cell immune profiling (TCR/BCR)                   | 6.1.2
-Cell Ranger ATAC  | Single-cell chromatin accessbility (ATAC)                | 2.0.0
+Cell Ranger ATAC  | Single-cell chromatin accessbility (ATAC)                | 2.1.0
 Cell Ranger ARC   | Single-cell multiome ATAC + Gene Expression              | 2.0.0
 Space Ranger      | Single-cell spatial gene expression                      | 1.3.1
 CellPlex          | Cell multiplexing                                        | 6.1.2
 mkref             | Creating a human+mouse hybrid genome                     | 0.0.6
+ArchR             | Processing and analyzing single-cell ATAC-seq data       | 0.1.0
 
 Coming Soon
 
 Pipeline          | Description
 ----------------- | --------------------------------------------------------------
-ArchR             | Processing and analyzing single-cell ATAC-seq data
 Mito Tracing      | Lineage tracing using mitochondrial mutations
 
 ## Prerequisites
