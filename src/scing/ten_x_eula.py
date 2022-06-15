@@ -38,8 +38,9 @@ def get_eula(soup):
     eula = soup.find("div", attrs={"class": "eula"})
     eula = eula.get_text()
 
-    eula, third_party_sw = eula.split("|Third Party Software|||")
-    eula = eula.replace("\n", "\n\n").strip() + "\n" + third_party_sw.replace("\n", " ")
+    # no longer necessary for the new EULA
+    # eula, third_party_sw = eula.split("|Third Party Software|||")
+    # eula = eula.replace("\n", "\n\n").strip() + "\n" + third_party_sw.replace("\n", " ")
 
     return eula
 
@@ -134,7 +135,7 @@ def handle_cookie(cookies):
 
     config = Config()
 
-    # [('sw-eula-full', '...')]
+    # [('sw-eula-full-22', '...')]
     for cookie in cookies.items():
         key, value = cookie
         if key == config.ten_x_eula_cookie_key:

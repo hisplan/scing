@@ -4,7 +4,11 @@ from pathlib import Path
 
 class Config:
 
-    _10x_eula_cookie_key = "sw-eula-full"
+    # deprecated
+    # _10x_eula_cookie_key = "sw-eula-full"
+
+    # new cookie key since 2022
+    _10x_eula_cookie_key = "sw-eula-full-22"
 
     @property
     def ten_x_eula_cookie_key(self) -> str:
