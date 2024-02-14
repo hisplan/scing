@@ -23,7 +23,7 @@ FastQC            | A high throughput sequence QC analysis tool              | 0
 Transgenes        | Creating a reference package with transgenes             | 0.0.8
 Cell Ranger GEX   | Single-cell gene expression (3' and 5')                  | 6.1.2
 Cell Ranger V(D)J | Single-cell immune profiling (TCR/BCR)                   | 6.1.2
-Cell Ranger ATAC  | Single-cell chromatin accessbility (ATAC)                | 2.1.0
+Cell Ranger ATAC  | Single-cell chromatin accessibility (ATAC)               | 2.1.0
 Cell Ranger ARC   | Single-cell multiome ATAC + Gene Expression              | 2.0.0
 Space Ranger      | Single-cell spatial gene expression                      | 1.3.1
 CellPlex          | Cell multiplexing                                        | 6.1.2
