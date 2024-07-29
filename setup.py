@@ -38,6 +38,7 @@ setuptools.setup(
         "cromwell-tools>=2.4.1",
         "beautifulsoup4>=4.9.3",
         "requests-html>=0.10.0"
+        "lxml_html_clean>=0.1.1"
     ],
     extras_require={
         "dev": [
